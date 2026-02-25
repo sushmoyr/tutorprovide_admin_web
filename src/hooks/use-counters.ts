@@ -17,6 +17,30 @@ export function useCounters(params: PaginationParams = {}) {
   });
 }
 
+export function useCreateCounter() {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: (data: { counterName: string; value: string }) =>
+      api.post<ApiResponse<Counter>>(endpoints.COUNTERS, data),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["counters"] });
+    },
+  });
+}
+
+export function useUpdateCounter() {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: ({ id, data }: { id: number; data: { counterName: string; value: string } }) =>
+      api.put<ApiResponse<Counter>>(endpoints.counterById(id), data),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["counters"] });
+    },
+  });
+}
+
 export function useDeleteCounter() {
   const queryClient = useQueryClient();
 

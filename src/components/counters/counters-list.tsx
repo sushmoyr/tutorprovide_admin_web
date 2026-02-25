@@ -36,6 +36,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { PageSizeSelector } from "@/components/shared/page-size-selector";
+import { EditCounterDialog } from "@/components/counters/edit-counter-dialog";
 import { useCounters, useDeleteCounter } from "@/hooks/use-counters";
 import { extractApiError } from "@/lib/api/error";
 import type { Counter, SortOrder } from "@/types";
@@ -81,6 +82,7 @@ export function CountersList() {
   const { data, isLoading, error } = useCounters({ page, size: pageSize, sortBy, order });
   const deleteMutation = useDeleteCounter();
   const [counterToDelete, setCounterToDelete] = useState<Counter | null>(null);
+  const [counterToEdit, setCounterToEdit] = useState<Counter | null>(null);
 
   const handleSort = (column: string) => {
     if (sortBy === column) {
@@ -206,7 +208,12 @@ export function CountersList() {
                 </TableCell>
                 <TableCell className="text-right">
                   <div className="flex items-center justify-end gap-1">
-                    <Button variant="ghost" size="icon" className="h-8 w-8">
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      className="h-8 w-8"
+                      onClick={() => setCounterToEdit(counter)}
+                    >
                       <Pencil className="h-4 w-4" />
                     </Button>
                     <Button
@@ -301,6 +308,12 @@ export function CountersList() {
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
+
+      <EditCounterDialog
+        counter={counterToEdit}
+        open={!!counterToEdit}
+        onOpenChange={(open) => !open && setCounterToEdit(null)}
+      />
     </>
   );
 }
