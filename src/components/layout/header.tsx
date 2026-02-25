@@ -14,7 +14,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { useAuthStore } from "@/stores/auth-store";
+import { useAuth } from "@/hooks/use-auth";
 import { useSidebarStore } from "@/stores/sidebar-store";
 import { useLocaleStore } from "@/stores/locale-store";
 import { BreadcrumbNav } from "./breadcrumb-nav";
@@ -23,14 +23,9 @@ import { Sidebar } from "./sidebar";
 export function Header() {
   const t = useTranslations();
   const router = useRouter();
-  const { user, logout } = useAuthStore();
+  const { user, logout } = useAuth();
   const { collapsed } = useSidebarStore();
   const { locale, locales, setLocale } = useLocaleStore();
-
-  const handleLogout = () => {
-    logout();
-    router.push("/login");
-  };
 
   const initials = user?.name
     ?.split(" ")
@@ -104,7 +99,7 @@ export function Header() {
             Profile
           </DropdownMenuItem>
           <DropdownMenuSeparator />
-          <DropdownMenuItem onClick={handleLogout} className="text-destructive">
+          <DropdownMenuItem onClick={logout} className="text-destructive">
             <LogOut className="mr-2 h-4 w-4" />
             {t("auth.logout")}
           </DropdownMenuItem>

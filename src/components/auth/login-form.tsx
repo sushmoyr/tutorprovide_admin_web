@@ -1,7 +1,5 @@
 "use client";
 
-import { useState } from "react";
-import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -18,13 +16,10 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { api } from "@/lib/api/client";
-import { endpoints } from "@/lib/api/endpoints";
-import { useAuthStore } from "@/stores/auth-store";
-import type { ApiResponse, TokenResult } from "@/types";
+import { useLogin } from "@/hooks/use-login";
 
 const loginSchema = z.object({
-  identity: z.string().min(1, "Email or phone is required"),
+  loginId: z.string().min(1, "Email or phone is required"),
   password: z.string().min(1, "Password is required"),
 });
 
@@ -32,30 +27,23 @@ type LoginFormData = z.infer<typeof loginSchema>;
 
 export function LoginForm() {
   const t = useTranslations("auth");
-  const router = useRouter();
-  const login = useAuthStore((state) => state.login);
-  const [error, setError] = useState<string | null>(null);
+  const { handleLogin, isLoading, error, clearError } = useLogin();
 
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitting },
+    formState: { errors },
   } = useForm<LoginFormData>({
     resolver: zodResolver(loginSchema),
   });
 
   const onSubmit = async (data: LoginFormData) => {
-    setError(null);
-    try {
-      const response = await api.post<ApiResponse<TokenResult>>(
-        endpoints.LOGIN,
-        data
-      );
-      login(response.data.data);
-      router.push("/");
-    } catch {
-      setError(t("loginError"));
-    }
+    clearError();
+    await handleLogin({
+      loginId: data.loginId,
+      password: data.password,
+      userType: "ADMIN",
+    });
   };
 
   return (
@@ -73,15 +61,15 @@ export function LoginForm() {
           )}
 
           <div className="space-y-2">
-            <Label htmlFor="identity">{t("email")}</Label>
+            <Label htmlFor="loginId">{t("email")}</Label>
             <Input
-              id="identity"
+              id="loginId"
               placeholder="admin@tutorprovide.com"
-              {...register("identity")}
+              {...register("loginId")}
             />
-            {errors.identity && (
+            {errors.loginId && (
               <p className="text-sm text-destructive">
-                {errors.identity.message}
+                {errors.loginId.message}
               </p>
             )}
           </div>
@@ -101,8 +89,8 @@ export function LoginForm() {
             )}
           </div>
 
-          <Button type="submit" className="w-full" disabled={isSubmitting}>
-            {isSubmitting ? (
+          <Button type="submit" className="w-full" disabled={isLoading}>
+            {isLoading ? (
               <>
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                 {t("loggingIn")}
