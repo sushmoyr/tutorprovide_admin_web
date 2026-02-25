@@ -13,7 +13,7 @@ export default function DashboardLayout({
   const { collapsed } = useSidebarStore();
 
   return (
-    <div className="min-h-screen bg-muted/40">
+    <div className="min-h-screen bg-background">
       {/* Desktop sidebar */}
       <div className="hidden md:block">
         <Sidebar />
@@ -22,7 +22,7 @@ export default function DashboardLayout({
       {/* Main content area */}
       <div
         className={cn(
-          "transition-all duration-300",
+          "transition-all duration-300 ease-in-out",
           collapsed ? "md:ml-[var(--sidebar-width-collapsed)]" : "md:ml-[var(--sidebar-width)]"
         )}
       >

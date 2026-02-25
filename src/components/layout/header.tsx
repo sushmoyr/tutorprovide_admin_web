@@ -7,7 +7,7 @@ import { useTheme } from "next-themes";
 import { LogOut, User, PanelLeft, Sun, Moon } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -21,6 +21,7 @@ import { useSidebarStore } from "@/stores/sidebar-store";
 import { useLocaleStore } from "@/stores/locale-store";
 import { BreadcrumbNav } from "./breadcrumb-nav";
 import { Sidebar } from "./sidebar";
+import Image from "next/image";
 
 export function Header() {
   const t = useTranslations();
@@ -41,7 +42,7 @@ export function Header() {
     .slice(0, 2) ?? "AD";
 
   return (
-    <header className="sticky top-0 z-20 flex h-16 items-center gap-4 border-b bg-background px-4 md:px-6">
+    <header className="sticky top-0 z-20 flex h-16 items-center gap-4 bg-background px-4 md:px-6">
       {/* Mobile sidebar trigger */}
       <Sheet>
         <SheetTrigger asChild>
@@ -100,9 +101,12 @@ export function Header() {
         <DropdownMenuTrigger asChild>
           <Button variant="ghost" className="relative h-9 w-9 rounded-full">
             <Avatar className="h-9 w-9">
+              {user?.userImage ? (
+                  <AvatarImage className="bg-brand-primary text-white text-xs" src={user.userImage}/>
+              ) : (
               <AvatarFallback className="bg-brand-primary text-white text-xs">
                 {initials}
-              </AvatarFallback>
+              </AvatarFallback> )}
             </Avatar>
           </Button>
         </DropdownMenuTrigger>
