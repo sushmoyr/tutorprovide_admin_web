@@ -22,7 +22,12 @@
     "loginSubtitle": "আপনার এডমিন অ্যাকাউন্টে সাইন ইন করুন",
     "loginButton": "সাইন ইন",
     "loginError": "ভুল তথ্য। আবার চেষ্টা করুন।",
-    "loggingIn": "সাইন ইন হচ্ছে..."
+    "loggingIn": "সাইন ইন হচ্ছে...",
+    "brandTagline": "আপনার সম্পূর্ণ টিউশন ম্যানেজমেন্ট প্ল্যাটফর্ম",
+    "featureManage": "শিক্ষক ও অভিভাবক পরিচালনা",
+    "featureTrack": "টিউশন পোস্ট ট্র্যাকিং",
+    "featureDashboard": "রিয়েল-টাইম ড্যাশবোর্ড",
+    "featureSecurity": "সুরক্ষিত অ্যাক্সেস নিয়ন্ত্রণ"
   },
   "sidebar": {
     "dashboard": "ড্যাশবোর্ড",
@@ -101,5 +106,24 @@
     "femaleGuardians": "মহিলা অভিভাবক",
     "platformCounters": "প্ল্যাটফর্ম কাউন্টার",
     "total": "মোট"
+  },
+  "banners": {
+    "title": "ব্যানার",
+    "subtitle": "ওয়েবসাইট ব্যানার এবং প্রচারণা পরিচালনা করুন",
+    "id": "আইডি",
+    "titleColumn": "শিরোনাম",
+    "description": "বিবরণ",
+    "image": "ছবি",
+    "link": "লিংক",
+    "createdAt": "তৈরির তারিখ",
+    "actions": "কার্যক্রম",
+    "deleteConfirmTitle": "ব্যানার মুছুন",
+    "deleteConfirmDescription": "আপনি কি নিশ্চিত যে আপনি এই ব্যানারটি মুছতে চান? এই কাজটি পূর্বাবস্থায় ফেরানো যাবে না।",
+    "deleteSuccess": "ব্যানার সফলভাবে মুছে ফেলা হয়েছে",
+    "addNew": "ব্যানার যোগ করুন",
+    "showing": "{from}-{to} দেখাচ্ছে, মোট {total}",
+    "previous": "পূর্ববর্তী",
+    "next": "পরবর্তী",
+    "pageOf": "পৃষ্ঠা {current} / {total}"
   }
 }

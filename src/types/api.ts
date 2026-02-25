@@ -1,6 +1,6 @@
 import type { User } from "./user";
 
-export type SortOrder = "asc" | "desc";
+export type SortOrder = "ASC" | "DESC";
 
 export interface PaginationInfo {
   totalElements: number;

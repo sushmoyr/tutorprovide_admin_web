@@ -123,6 +123,9 @@ messages/
 - **Client**: `import { api } from "@/lib/api/client"` — typed get/post/put/patch/delete
 - **Endpoints**: `import { endpoints } from "@/lib/api/endpoints"` — use instead of hardcoded strings
 - **Response shape**: `ApiResponse<T>` with `meta`, `data`, `pagination?`
+- **Sort order**: API expects uppercase `ASC` / `DESC` — use `SortOrder` type from `@/types`
+- **Query params**: `api.get(url, params)` — the wrapper already nests inside `{ params }`, so pass a flat object (e.g., `{ page, size, sortBy, order }`)
+- **Pagination & sorting**: Always implement when the API supports it
 
 ### Authorization
 
