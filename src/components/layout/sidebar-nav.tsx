@@ -20,6 +20,9 @@ import {
   Flag,
   Megaphone,
   Gift,
+  Globe,
+  Wallet,
+  MessageSquare,
   type LucideIcon,
 } from "lucide-react";
 
@@ -27,68 +30,109 @@ export interface NavItem {
   title: string;
   href: string;
   icon: LucideIcon;
-  permission?: string;
 }
 
 export interface NavGroup {
+  id: string;
   label: string;
+  icon: LucideIcon;
   items: NavItem[];
 }
 
-export const sidebarNav: NavGroup[] = [
+export const topItems: NavItem[] = [
+  { title: "sidebar.dashboard", href: "/", icon: LayoutDashboard },
+];
+
+export const sidebarGroups: NavGroup[] = [
   {
-    label: "",
+    id: "tuition-profile",
+    label: "sidebar.tuitionProfile",
+    icon: BookOpen,
     items: [
-      { title: "sidebar.dashboard", href: "/", icon: LayoutDashboard },
-    ],
-  },
-  {
-    label: "sidebar.administration",
-    items: [
-      { title: "sidebar.users", href: "/users", icon: Users },
-      { title: "sidebar.tutors", href: "/tutors", icon: GraduationCap },
-      { title: "sidebar.guardians", href: "/guardians", icon: UserCheck },
-      { title: "sidebar.employees", href: "/employees", icon: Building2 },
       { title: "sidebar.tuitions", href: "/tuitions", icon: BookOpen },
       { title: "sidebar.posts", href: "/posts", icon: FileText },
+      { title: "sidebar.employees", href: "/employees", icon: Building2 },
+      { title: "sidebar.guardians", href: "/guardians", icon: UserCheck },
+      { title: "sidebar.tutors", href: "/tutors", icon: GraduationCap },
       { title: "sidebar.premiumRequests", href: "/premium-requests", icon: Award },
       { title: "sidebar.verificationRequests", href: "/verification-requests", icon: BadgeCheck },
     ],
   },
   {
-    label: "sidebar.configuration",
+    id: "employee-config",
+    label: "sidebar.employeeConfig",
+    icon: Building2,
     items: [
-      { title: "sidebar.divisions", href: "/divisions", icon: MapPin },
-      { title: "sidebar.districts", href: "/districts", icon: MapPin },
-      { title: "sidebar.areas", href: "/areas", icon: MapPin },
-      { title: "sidebar.categories", href: "/categories", icon: Layers },
-      { title: "sidebar.subjects", href: "/subjects", icon: BookOpen },
-      { title: "sidebar.classes", href: "/classes", icon: GraduationCap },
-      { title: "sidebar.curriculum", href: "/curriculum", icon: BookOpen },
       { title: "sidebar.departments", href: "/departments", icon: Building2 },
       { title: "sidebar.designations", href: "/designations", icon: Building2 },
     ],
   },
   {
-    label: "sidebar.content",
+    id: "location",
+    label: "sidebar.location",
+    icon: MapPin,
     items: [
-      { title: "sidebar.blogs", href: "/blogs", icon: Newspaper },
-      { title: "sidebar.faqs", href: "/faqs", icon: HelpCircle },
-      { title: "sidebar.galleries", href: "/galleries", icon: Image },
-      { title: "sidebar.banners", href: "/banners", icon: Flag },
-      { title: "sidebar.ads", href: "/ads", icon: Megaphone },
-      { title: "sidebar.notices", href: "/notices", icon: Megaphone },
+      { title: "sidebar.divisions", href: "/divisions", icon: MapPin },
+      { title: "sidebar.districts", href: "/districts", icon: MapPin },
+      { title: "sidebar.areas", href: "/areas", icon: MapPin },
+      { title: "sidebar.livingLocations", href: "/living-locations", icon: MapPin },
     ],
   },
   {
-    label: "sidebar.settings",
+    id: "tuition-config",
+    label: "sidebar.tuitionConfig",
+    icon: Layers,
+    items: [
+      { title: "sidebar.categories", href: "/categories", icon: Layers },
+      { title: "sidebar.curriculum", href: "/curriculum", icon: BookOpen },
+      { title: "sidebar.classes", href: "/classes", icon: GraduationCap },
+      { title: "sidebar.subjects", href: "/subjects", icon: BookOpen },
+    ],
+  },
+  {
+    id: "billing",
+    label: "sidebar.billing",
+    icon: Wallet,
     items: [
       { title: "sidebar.invoices", href: "/invoices", icon: Receipt },
       { title: "sidebar.payments", href: "/payments", icon: CreditCard },
-      { title: "sidebar.coupons", href: "/coupons", icon: Gift },
+    ],
+  },
+  {
+    id: "user-role",
+    label: "sidebar.userRole",
+    icon: Shield,
+    items: [
+      { title: "sidebar.users", href: "/users", icon: Users },
       { title: "sidebar.roles", href: "/roles", icon: Shield },
       { title: "sidebar.permissions", href: "/permissions", icon: Shield },
+    ],
+  },
+  {
+    id: "website-config",
+    label: "sidebar.websiteConfig",
+    icon: Globe,
+    items: [
+      { title: "sidebar.banners", href: "/banners", icon: Flag },
+      { title: "sidebar.coupons", href: "/coupons", icon: Gift },
+      { title: "sidebar.counters", href: "/counters", icon: Settings },
+      { title: "sidebar.partners", href: "/partners", icon: Users },
+      { title: "sidebar.faqs", href: "/faqs", icon: HelpCircle },
+      { title: "sidebar.welcomeGreetings", href: "/welcome-greetings", icon: MessageSquare },
+      { title: "sidebar.ads", href: "/ads", icon: Megaphone },
+      { title: "sidebar.walkthroughs", href: "/walkthroughs", icon: BookOpen },
+      { title: "sidebar.notices", href: "/notices", icon: Megaphone },
+      { title: "sidebar.feedbacks", href: "/feedbacks", icon: HelpCircle },
       { title: "sidebar.settings", href: "/settings", icon: Settings },
+    ],
+  },
+  {
+    id: "blog-gallery",
+    label: "sidebar.blogGallery",
+    icon: Newspaper,
+    items: [
+      { title: "sidebar.blogs", href: "/blogs", icon: Newspaper },
+      { title: "sidebar.galleries", href: "/galleries", icon: Image },
     ],
   },
 ];
