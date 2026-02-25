@@ -78,6 +78,28 @@
   },
   "dashboard": {
     "title": "Dashboard",
-    "welcome": "Welcome back"
+    "welcome": "Welcome back",
+    "welcomeBack": "Welcome back",
+    "goodMorning": "Good morning",
+    "goodAfternoon": "Good afternoon",
+    "goodEvening": "Good evening",
+    "bannerSubtitle": "Here's what's happening across your platform today. Monitor tuitions, users, and key metrics at a glance.",
+    "tuitionOverview": "Tuition Overview",
+    "totalTuitions": "Total Tuitions",
+    "pendingTuitions": "Pending",
+    "liveTuitions": "Live",
+    "shortlistedTuitions": "Shortlisted",
+    "appointedTuitions": "Appointed",
+    "confirmedTuitions": "Confirmed",
+    "cancelledTuitions": "Cancelled",
+    "userOverview": "User Overview",
+    "totalTutors": "Total Tutors",
+    "maleTutors": "Male Tutors",
+    "femaleTutors": "Female Tutors",
+    "totalGuardians": "Total Guardians",
+    "maleGuardians": "Male Guardians",
+    "femaleGuardians": "Female Guardians",
+    "platformCounters": "Platform Counters",
+    "total": "Total"
   }
 }

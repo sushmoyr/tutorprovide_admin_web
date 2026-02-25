@@ -42,7 +42,7 @@ export function LoginForm() {
     await handleLogin({
       loginId: data.loginId,
       password: data.password,
-      userType: "ADMIN",
+      userType: "EMPLOYEE",
     });
   };
 

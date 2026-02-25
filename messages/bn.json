@@ -78,6 +78,28 @@
   },
   "dashboard": {
     "title": "ড্যাশবোর্ড",
-    "welcome": "স্বাগতম"
+    "welcome": "স্বাগতম",
+    "welcomeBack": "স্বাগতম",
+    "goodMorning": "সুপ্রভাত",
+    "goodAfternoon": "শুভ অপরাহ্ণ",
+    "goodEvening": "শুভ সন্ধ্যা",
+    "bannerSubtitle": "আজ আপনার প্ল্যাটফর্মে কী ঘটছে তা এখানে দেখুন। টিউশন, ব্যবহারকারী এবং মূল পরিসংখ্যান পর্যবেক্ষণ করুন।",
+    "tuitionOverview": "টিউশন সারসংক্ষেপ",
+    "totalTuitions": "মোট টিউশন",
+    "pendingTuitions": "অপেক্ষমাণ",
+    "liveTuitions": "সক্রিয়",
+    "shortlistedTuitions": "বাছাইকৃত",
+    "appointedTuitions": "নিযুক্ত",
+    "confirmedTuitions": "নিশ্চিত",
+    "cancelledTuitions": "বাতিল",
+    "userOverview": "ব্যবহারকারী সারসংক্ষেপ",
+    "totalTutors": "মোট শিক্ষক",
+    "maleTutors": "পুরুষ শিক্ষক",
+    "femaleTutors": "মহিলা শিক্ষক",
+    "totalGuardians": "মোট অভিভাবক",
+    "maleGuardians": "পুরুষ অভিভাবক",
+    "femaleGuardians": "মহিলা অভিভাবক",
+    "platformCounters": "প্ল্যাটফর্ম কাউন্টার",
+    "total": "মোট"
   }
 }

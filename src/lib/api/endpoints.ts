@@ -6,6 +6,9 @@ export const endpoints = {
 
   // Dashboard
   DASHBOARD: "/dashboard",
+  DASHBOARD_TUITION_COUNT: "/dashboard/admin/tuition-count",
+  DASHBOARD_TUTOR_COUNT: "/dashboard/admin/tutor-count",
+  DASHBOARD_GUARDIAN_COUNT: "/dashboard/admin/guardian-count",
 
   // Users
   USERS: "/users",

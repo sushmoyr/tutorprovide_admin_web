@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
@@ -61,14 +62,16 @@ export function Sidebar() {
         )}
       >
         {/* Logo */}
-        <div className="flex h-16 shrink-0 items-center border-b px-4">
-          <Link href="/" className="flex items-center gap-2">
-            <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-brand-primary text-white font-bold text-sm">
-              TP
-            </div>
-            {!collapsed && (
-              <span className="font-semibold text-lg">Admin</span>
-            )}
+        <div className="flex h-14 shrink-0 items-center px-3">
+          <Link href="/">
+            <Image
+              src="/images/logo.png"
+              alt="TutorProvide"
+              width={collapsed ? 40 : 160}
+              height={40}
+              unoptimized
+              className="object-contain"
+            />
           </Link>
         </div>
 

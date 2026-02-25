@@ -11,7 +11,7 @@ import type { ApiResponse, TokenResult } from "@/types";
 interface LoginCredentials {
   loginId: string;
   password: string;
-  userType?: "ADMIN" | "EMPLOYEE";
+  userType?: "EMPLOYEE";
 }
 
 export function useLogin() {
@@ -30,7 +30,7 @@ export function useLogin() {
         {
           loginId: credentials.loginId,
           password: credentials.password,
-          userType: credentials.userType ?? "ADMIN",
+          userType: credentials.userType ?? "EMPLOYEE",
         }
       );
 

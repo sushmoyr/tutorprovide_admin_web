@@ -1,18 +1,19 @@
 "use client";
 
-import { useTranslations } from "next-intl";
-import { useAuthStore } from "@/stores/auth-store";
+import { WelcomeBanner } from "@/components/dashboard/welcome-banner";
+import { WelcomeGreetingDialog } from "@/components/dashboard/welcome-greeting-dialog";
+import { TuitionStats } from "@/components/dashboard/tuition-stats";
+import { UserStats } from "@/components/dashboard/user-stats";
+import { StaticCounters } from "@/components/dashboard/static-counters";
 
 export default function DashboardPage() {
-  const t = useTranslations("dashboard");
-  const user = useAuthStore((state) => state.user);
-
   return (
-    <div>
-      <h1 className="text-2xl font-bold">{t("title")}</h1>
-      <p className="text-muted-foreground mt-1">
-        {t("welcome")}, {user?.name ?? "Admin"}
-      </p>
+    <div className="space-y-6">
+      <WelcomeGreetingDialog />
+      <WelcomeBanner />
+      <TuitionStats />
+      <UserStats />
+      <StaticCounters />
     </div>
   );
 }

@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   /* ── Font ─────────────────────────────────────────────────── */
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
@@ -135,6 +137,14 @@
   --color-sidebar-border: oklch(27.39% 0.0069 286.03);
   --color-sidebar-accent: oklch(25.33% 0.015 252.42);
   --color-sidebar-accent-foreground: oklch(97.61% 0.0043 198.13);
+}
+
+*,
+::after,
+::before,
+::backdrop,
+::file-selector-button {
+  border-color: var(--color-border);
 }
 
 body {

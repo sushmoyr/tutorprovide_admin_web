@@ -1,8 +1,10 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
-import { LogOut, User, PanelLeft } from "lucide-react";
+import { useTheme } from "next-themes";
+import { LogOut, User, PanelLeft, Sun, Moon } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
@@ -26,6 +28,10 @@ export function Header() {
   const { user, logout } = useAuth();
   const { collapsed } = useSidebarStore();
   const { locale, locales, setLocale } = useLocaleStore();
+  const { resolvedTheme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
 
   const initials = user?.name
     ?.split(" ")
@@ -74,6 +80,20 @@ export function Header() {
           )}
         </DropdownMenuContent>
       </DropdownMenu>
+
+      {/* Theme toggle */}
+      <Button
+        variant="ghost"
+        size="icon"
+        onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
+      >
+        {mounted && resolvedTheme === "dark" ? (
+          <Moon className="h-4 w-4" />
+        ) : (
+          <Sun className="h-4 w-4" />
+        )}
+        <span className="sr-only">Toggle theme</span>
+      </Button>
 
       {/* User menu */}
       <DropdownMenu>
