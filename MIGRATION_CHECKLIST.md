@@ -6,8 +6,7 @@
 
 ## Authentication
 
-- [x] Admin Login (`/login`)
-- [ ] Employee Login (`/employee/login`)
+- [x] Admin/Employee Login (`/login`)
 
 ## Dashboard
 
@@ -137,8 +136,8 @@
 ## Banners
 
 - [x] Banners List (`/banners`)
-- [ ] Create Banner (`/banner/create`)
-- [ ] Edit Banner (`/banner/edit/:id`)
+- [x] Create Banner (`/banner/create`)
+- [x] Edit Banner (`/banner/edit/:id`)
 
 ## Counters
 
@@ -234,11 +233,6 @@
 - [ ] Profile Update (`/profile/update`)
 - [ ] Password/Security (`/security`)
 
-## Special Pages
-
-- [ ] Live Chat (`/chats`)
-- [ ] Push Notifications (`/push`)
-
 ## Error Pages
 
 - [ ] 404 Not Found
@@ -247,8 +241,8 @@
 
 ## Progress Summary
 
-| Status | Count |
-|--------|-------|
-| Done | 7 |
-| Remaining | ~130 |
-| **Total** | **~137** |
+| Status | Count    |
+|--------|----------|
+| Done | 7        |
+| Remaining | ~127     |
+| **Total** | **~134** |

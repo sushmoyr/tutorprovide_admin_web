@@ -22,6 +22,30 @@ export function useBanners(params: PaginationParams = {}) {
   });
 }
 
+export function useCreateBanner() {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: (data: FormData) =>
+      api.post<ApiResponse<Banner>>(endpoints.BANNERS, data),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["banners"] });
+    },
+  });
+}
+
+export function useUpdateBanner() {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: ({ id, data }: { id: number; data: FormData }) =>
+      api.put<ApiResponse<Banner>>(endpoints.bannerById(id), data),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["banners"] });
+    },
+  });
+}
+
 export function useDeleteBanner() {
   const queryClient = useQueryClient();
 

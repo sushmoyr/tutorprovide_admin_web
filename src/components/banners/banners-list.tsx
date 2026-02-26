@@ -44,6 +44,7 @@ import {
 } from "@/components/ui/tooltip";
 import { PageSizeSelector } from "@/components/shared/page-size-selector";
 import { useBanners, useDeleteBanner } from "@/hooks/use-banners";
+import { EditBannerDialog } from "@/components/banners/edit-banner-dialog";
 import { extractApiError } from "@/lib/api/error";
 import type { Banner, SortOrder } from "@/types";
 
@@ -102,6 +103,7 @@ export function BannersList() {
   const { data, isLoading, error } = useBanners({ page, size: pageSize, sortBy, order });
   const deleteMutation = useDeleteBanner();
   const [bannerToDelete, setBannerToDelete] = useState<Banner | null>(null);
+  const [bannerToEdit, setBannerToEdit] = useState<Banner | null>(null);
 
   const handleSort = (column: string) => {
     if (sortBy === column) {
@@ -258,7 +260,12 @@ export function BannersList() {
                 </TableCell>
                 <TableCell className="text-right">
                   <div className="flex items-center justify-end gap-1">
-                    <Button variant="ghost" size="icon" className="h-8 w-8">
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      className="h-8 w-8"
+                      onClick={() => setBannerToEdit(banner)}
+                    >
                       <Pencil className="h-4 w-4" />
                     </Button>
                     <Button
@@ -353,6 +360,12 @@ export function BannersList() {
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
+
+      <EditBannerDialog
+        banner={bannerToEdit}
+        open={!!bannerToEdit}
+        onOpenChange={(open) => !open && setBannerToEdit(null)}
+      />
     </>
   );
 }

@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
@@ -199,4 +200,17 @@ body {
 @keyframes accordion-up {
   from { height: var(--radix-accordion-content-height); opacity: 1; }
   to   { height: 0; opacity: 0; }
+}
+
+/* ── Tiptap editor ───────────────────────────────────────── */
+.tiptap {
+  outline: none;
+}
+
+.tiptap p.is-editor-empty:first-child::before {
+  content: attr(data-placeholder);
+  float: left;
+  color: var(--color-muted-foreground);
+  pointer-events: none;
+  height: 0;
 }
