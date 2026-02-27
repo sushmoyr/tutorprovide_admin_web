@@ -119,10 +119,10 @@
 
 ## Roles & Permissions
 
-- [ ] Permissions List (`/permissions`)
-- [ ] Roles List (`/roles`)
-- [ ] Create Role (`/roles/create`)
-- [ ] Edit Role (`/roles/edit/:id`)
+- [x] Permissions List (`/permissions`)
+- [x] Roles List (`/roles`)
+- [x] Create Role (dialog in `/roles`)
+- [x] Edit Role (dialog in `/roles`)
 - [ ] Role Details (`/roles/details/:id`)
 - [ ] Role Management (`/roles/management`)
 
@@ -147,85 +147,85 @@
 
 ## Partners
 
-- [ ] Partners List (`/partners`)
-- [ ] Create Partner (`/partner/create`)
-- [ ] Edit Partner (`/partner/edit/:id`)
+- [x] Partners List (`/partners`)
+- [x] Create Partner (`/partner/create`)
+- [x] Edit Partner (`/partner/edit/:id`)
 
 ## Welcome Greetings
 
-- [ ] Welcome Greetings List (`/welcome-greetings`)
-- [ ] Create Welcome Greeting (`/welcome-greetings/create`)
-- [ ] Edit Welcome Greeting (`/welcome-greetings/edit/:id`)
+- [x] Welcome Greetings List (`/welcome-greetings`)
+- [x] Create Welcome Greeting (dialog in `/welcome-greetings`)
+- [x] Edit Welcome Greeting (dialog in `/welcome-greetings`)
 
 ## Walkthroughs
 
-- [ ] Walkthroughs List (`/walkthroughs`)
-- [ ] Create Walkthrough (`/walkthrough/create`)
-- [ ] Edit Walkthrough (`/walkthrough/edit/:key`)
+- [x] Walkthroughs List (`/walkthroughs`)
+- [x] Create Walkthrough (dialog in `/walkthroughs`)
+- [x] Edit Walkthrough (dialog in `/walkthroughs`)
 
 ## Notices
 
-- [ ] Notices List (`/notices`)
-- [ ] Create Notice (`/notices/create`)
-- [ ] Edit Notice (`/notices/edit/:id`)
+- [x] Notices List (`/notices`)
+- [x] Create Notice (dialog in `/notices`)
+- [x] Edit Notice (dialog in `/notices`)
 
 ## Advertisements
 
-- [ ] Ads List (`/ads`)
-- [ ] Advertisements (`/advertise`)
+- [x] Ads List (`/ads`)
+- [x] Create/Edit Ad (dialog in `/ads`)
 
 ## Blogs
 
-- [ ] Blogs List (`/blogs`)
-- [ ] Create Blog (`/blogs/create`)
-- [ ] Edit Blog (`/blogs/edit/:slug`)
+- [x] Blogs List (`/blogs`)
+- [x] Create Blog (dialog in `/blogs`)
+- [x] Edit Blog (dialog in `/blogs`)
 - [ ] Blog Details (`/blog/details/:slug`)
 - [ ] Blogs by Tag (`/tag/blogs/:tag`)
-- [ ] Blog Categories (`/blog-categories`)
+- [x] Blog Categories (`/blog-categories`)
 
 ## Galleries
 
-- [ ] Galleries List (`/galleries`)
-- [ ] Create Gallery (`/galleries/create`)
-- [ ] Edit Gallery (`/galleries/edit/:id`)
+- [x] Galleries List (`/galleries`)
+- [x] Create Gallery (dialog in `/galleries`)
+- [x] Edit Gallery (dialog in `/galleries`)
 
 ## FAQs
 
-- [ ] FAQs List (`/faqs`)
+- [x] FAQs List (`/faqs`)
+- [x] Create/Edit FAQ (dialog in `/faqs`)
 
 ## Feedback
 
-- [ ] Feedback List (`/feedbacks`)
-- [ ] Edit Feedback (`/feedbacks/edit/:id`)
+- [x] Feedback List (`/feedbacks`)
+- [x] Edit Feedback (dialog in `/feedbacks`)
 
 ## Coupons
 
-- [ ] Coupons List (`/coupons`)
+- [x] Coupons List (`/coupons`)
+- [x] Create/Edit Coupon (dialog in `/coupons`)
 
 ## Settings & Welcome Modals
 
-- [ ] Settings (`/settings`)
-- [ ] Welcome Home Modals List (`/welcome/homes`)
-- [ ] Edit Welcome Home Modal (`/welcome/homes/edit/:id`)
-- [ ] Welcome Backend Modals List (`/welcome/backends`)
-- [ ] Edit Welcome Backend Modal (`/welcome/backends/edit/:id`)
+- [x] Settings / Service Charges (`/settings`)
+- [x] Welcome Home Modals (via Welcome Greetings type filter)
+- [x] Welcome Backend Modals (via Welcome Greetings type filter)
 
 ## Content — Terms & Policies
 
-- [ ] Terms List (`/terms`)
-- [ ] Edit Term (`/edit/term/:id`)
-- [ ] Policies List (`/policies`)
-- [ ] Edit Policy (`/edit/policy/:id`)
+- [x] Terms List (`/terms`)
+- [x] Create/Edit Term (dialog in `/terms`)
+- [x] Policies List (`/policies`)
+- [x] Create/Edit Policy (dialog in `/policies`)
 
 ## Content — Video Tutorials
 
-- [ ] Video Tutorials List (`/video/tutorials`)
-- [ ] Edit Video Tutorial (`/video/tutorials/edit/:id`)
+- [x] Video Tutorials List (`/video-tutorials`)
+- [x] Create/Edit Video Tutorial (dialog in `/video-tutorials`)
 
 ## Team
 
-- [ ] Team Members List (`/teams`)
-- [ ] Edit Team Member (`/edit/team/:id`)
+- [x] Team Members List (`/teams`)
+- [x] Create/Edit Team Member (dialog in `/teams`)
 
 ## Profile & Security
 
@@ -239,10 +239,16 @@
 
 ---
 
+## Activity Log
+
+- [x] Activity Log (`/activity-log`)
+
+---
+
 ## Progress Summary
 
 | Status | Count    |
 |--------|----------|
-| Done | 7        |
-| Remaining | ~127     |
+| Done | ~48      |
+| Remaining | ~86      |
 | **Total** | **~134** |

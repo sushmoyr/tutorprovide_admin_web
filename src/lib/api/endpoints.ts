@@ -73,8 +73,10 @@ export const endpoints = {
   // Content Management
   BLOGS: "/blogs",
   blogBySlug: (slug: string) => `/blogs/${slug}`,
+  blogStatus: (slug: string, status: string) => `/blogs/${slug}/${status}`,
   BLOG_CATEGORIES: "/blogs/categories",
   blogCategoryById: (id: string | number) => `/blogs/categories/${id}`,
+  TAGS: "/tags",
   FAQS: "/faq",
   faqById: (id: string | number) => `/faq/${id}`,
   GALLERIES: "/configurations/gallery",
@@ -83,16 +85,44 @@ export const endpoints = {
   bannerById: (id: string | number) => `/configurations/banners/${id}`,
   ADS: "/ads",
   adById: (id: string | number) => `/ads/${id}`,
+  adStatus: (id: string | number, status: string) => `/ads/${id}/${status}`,
   ANNOUNCEMENTS: "/announcements",
+  ANNOUNCEMENTS_MANAGEMENT: "/announcements/management",
   announcementById: (id: string | number) => `/announcements/${id}`,
+  announcementPublish: (id: string | number) => `/announcements/${id}/publish`,
   PARTNERS: "/configurations/partners",
   partnerById: (id: string | number) => `/configurations/partners/${id}`,
   COUNTERS: "/configurations/static-counter",
   counterById: (id: string | number) => `/configurations/static-counter/${id}`,
   WELCOME_GREETINGS: "/configurations/welcome-greetings",
   welcomeGreetingById: (id: string | number) => `/configurations/welcome-greetings/${id}`,
-  WALKTHROUGHS: "/configurations/walkthroughs",
-  walkthroughById: (id: string | number) => `/configurations/walkthroughs/${id}`,
+  WALKTHROUGHS: "/configurations/walkthrough",
+  walkthroughByKey: (key: string) => `/configurations/walkthrough/${key}`,
+
+  // Feedback
+  FEEDBACKS: "/feedbacks",
+  feedbackById: (id: string | number) => `/feedbacks/${id}`,
+  feedbackStatus: (id: string | number, status: string) => `/feedbacks/${id}/${status}`,
+
+  // Service Charges
+  SERVICE_CHARGES: "/configurations/service-charges",
+
+  // Teams (legacy)
+  TEAMS: "/teams",
+  teamById: (id: string | number) => `/teams/${id}`,
+
+  // Video Tutorials (legacy)
+  VIDEO_TUTORIALS: "/video-tutorials",
+  videoTutorialById: (id: string | number) => `/video-tutorials/${id}`,
+
+  // Terms & Policies (legacy)
+  TERMS: "/terms",
+  termById: (id: string | number) => `/terms/${id}`,
+  POLICIES: "/policies",
+  policyById: (id: string | number) => `/policies/${id}`,
+
+  // File Upload
+  FILE_UPLOAD_MULTIPLE: "/files/upload/multiple",
 
   // Premium & Verification
   PREMIUMS: "/applications/premium-tutor",

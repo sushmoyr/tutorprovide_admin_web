@@ -24,6 +24,10 @@ import {
   Wallet,
   MessageSquare,
   History,
+  Video,
+  Scale,
+  UsersRound,
+  FolderOpen,
   type LucideIcon,
 } from "lucide-react";
 
@@ -134,7 +138,19 @@ export const sidebarGroups: NavGroup[] = [
     icon: Newspaper,
     items: [
       { title: "sidebar.blogs", href: "/blogs", icon: Newspaper },
+      { title: "sidebar.blogCategories", href: "/blog-categories", icon: FolderOpen },
       { title: "sidebar.galleries", href: "/galleries", icon: Image },
+    ],
+  },
+  {
+    id: "content",
+    label: "sidebar.content",
+    icon: FileText,
+    items: [
+      { title: "sidebar.terms", href: "/terms", icon: Scale },
+      { title: "sidebar.policies", href: "/policies", icon: FileText },
+      { title: "sidebar.videoTutorials", href: "/video-tutorials", icon: Video },
+      { title: "sidebar.teams", href: "/teams", icon: UsersRound },
     ],
   },
 ];

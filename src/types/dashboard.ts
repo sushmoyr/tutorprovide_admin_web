@@ -28,15 +28,3 @@ export interface StaticCounter {
   value: number;
 }
 
-export interface WelcomeGreeting {
-  createdAt: string;
-  updatedAt: string;
-  createdBy: { id: number; name: string; userImage: string; userType: string };
-  updatedBy: { id: number; name: string; userImage: string; userType: string };
-  id: number;
-  title: string;
-  description: string;
-  imageUrl: string;
-  link: string;
-  type: string;
-}
