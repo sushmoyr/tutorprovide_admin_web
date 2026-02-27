@@ -110,4 +110,11 @@ export const endpoints = {
 
   // Profile
   PROFILE: "/profile",
+
+  // Audit
+  AUDIT_SNAPSHOTS: "/audit/snapshots",
+  auditEntitySnapshots: (entityType: string, entityId: string | number) =>
+    `/audit/snapshots/${entityType}/${entityId}`,
+  auditEntityChanges: (entityType: string, entityId: string | number) =>
+    `/audit/changes/${entityType}/${entityId}`,
 } as const;

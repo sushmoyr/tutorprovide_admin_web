@@ -23,6 +23,7 @@ import {
   Globe,
   Wallet,
   MessageSquare,
+  History,
   type LucideIcon,
 } from "lucide-react";
 
@@ -41,6 +42,7 @@ export interface NavGroup {
 
 export const topItems: NavItem[] = [
   { title: "sidebar.dashboard", href: "/", icon: LayoutDashboard },
+  { title: "sidebar.activityLog", href: "/activity-log", icon: History },
 ];
 
 export const sidebarGroups: NavGroup[] = [
