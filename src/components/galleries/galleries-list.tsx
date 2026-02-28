@@ -88,10 +88,10 @@ export function GalleriesList() {
 
   return (
     <>
-      <div className="rounded-lg border">
+      <div className="rounded-lg border bg-card text-card-foreground">
         <Table>
           <TableHeader>
-            <TableRow className="bg-muted hover:bg-muted">
+            <TableRow className="bg-muted hover:bg-muted text-muted-foreground">
               <TableHead className="w-16">{t("id")}</TableHead>
               <TableHead>{t("images")}</TableHead>
               <TableHead>{t("titleColumn")}</TableHead>

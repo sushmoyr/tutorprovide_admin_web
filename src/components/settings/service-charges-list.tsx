@@ -65,10 +65,10 @@ export function ServiceChargesList() {
 
   return (
     <>
-      <div className="rounded-lg border">
+      <div className="rounded-lg border bg-card text-card-foreground">
         <Table>
           <TableHeader>
-            <TableRow className="bg-muted hover:bg-muted">
+            <TableRow className="bg-muted hover:bg-muted text-muted-foreground">
               <TableHead>{t("serviceType")}</TableHead>
               <TableHead>{t("charge")}</TableHead>
               <TableHead className="w-24 text-right">{t("actions")}</TableHead>

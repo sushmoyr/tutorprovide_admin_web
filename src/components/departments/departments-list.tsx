@@ -130,10 +130,10 @@ export function DepartmentsList() {
 
   return (
     <>
-      <div className="rounded-lg border">
+      <div className="rounded-lg border bg-card text-card-foreground">
         <Table>
           <TableHeader>
-            <TableRow className="bg-muted hover:bg-muted">
+            <TableRow className="bg-muted hover:bg-muted text-muted-foreground">
               <TableHead className="w-16">{t("sl")}</TableHead>
               <TableHead>
                 <button

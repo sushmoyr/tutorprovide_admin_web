@@ -15,20 +15,9 @@
 You are migrating pages from a Vue.js admin panel to a Next.js admin panel. Your goal is to migrate all pending (unchecked) items from the following feature sections in `MIGRATION_CHECKLIST.md`:
 
 **Features to migrate:** 
-- Roles & Permissions
-- Welcome Greetings
-- Walkthroughs
-- Notices
-- Advertisements
-- Blogs
-- Galleries
-- FAQs
-- Feedback
-- Coupons
-- Settings & Welcome Modals
-- Content — Terms & Policies
-- Content — Video Tutorials
-- Team
+- Address Configuration
+- Tuition Configuration
+- Employee Configuration
 
 ---
 
