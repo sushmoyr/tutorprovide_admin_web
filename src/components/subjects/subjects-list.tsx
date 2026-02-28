@@ -223,7 +223,7 @@ export function SubjectsList() {
                     </TableCell>
                     <TableCell>
                       <span className="text-sm text-muted-foreground">
-                        {subject.preferableClass.name}
+                        {subject.preferableClass?.name}
                       </span>
                     </TableCell>
                     <TableCell>

@@ -72,7 +72,7 @@ export function EditClassDialog({
   useEffect(() => {
     if (prefClass && open) {
       reset({
-        categoryId: String(prefClass.preferableCategory.id),
+        categoryId: String(prefClass.preferableCategory?.id ?? ""),
         name: prefClass.name,
         numericValue: String(prefClass.numericValue),
       });

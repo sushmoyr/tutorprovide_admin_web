@@ -76,7 +76,7 @@ export function EditAreaDialog({
   useEffect(() => {
     if (area && open) {
       reset({
-        districtId: String(area.district.id),
+        districtId: String(districts.find((d) => d.name === area.districtName)?.id ?? ""),
         name: area.name,
       });
       setImageFile(null);
@@ -84,7 +84,7 @@ export function EditAreaDialog({
       setImageError(null);
       if (fileInputRef.current) fileInputRef.current.value = "";
     }
-  }, [area, open, reset]);
+  }, [area, open, reset, districts]);
 
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];

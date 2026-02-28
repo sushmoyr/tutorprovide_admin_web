@@ -69,11 +69,11 @@ export function EditLivingLocationDialog({
   useEffect(() => {
     if (location && open) {
       reset({
-        areaId: String(location.area.id),
+        areaId: String(areas.find((a) => a.name === location.areaName)?.id ?? ""),
         name: location.name,
       });
     }
-  }, [location, open, reset]);
+  }, [location, open, reset, areas]);
 
   const onSubmit = async (data: EditLivingLocationFormData) => {
     if (!location) return;

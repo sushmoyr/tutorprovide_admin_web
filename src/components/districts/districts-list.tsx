@@ -215,7 +215,7 @@ export function DistrictsList() {
                     {page * pageSize + index + 1}
                   </TableCell>
                   <TableCell>
-                    <span className="text-sm">{district.division.name}</span>
+                    <span className="text-sm">{district.divisionName}</span>
                   </TableCell>
                   <TableCell>
                     <span className="text-sm font-medium">{district.name}</span>

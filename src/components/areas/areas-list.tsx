@@ -216,7 +216,7 @@ export function AreasList() {
                     {page * pageSize + index + 1}
                   </TableCell>
                   <TableCell>
-                    <span className="text-sm">{area.district.name}</span>
+                    <span className="text-sm">{area.districtName}</span>
                   </TableCell>
                   <TableCell>
                     <span className="text-sm font-medium">{area.name}</span>

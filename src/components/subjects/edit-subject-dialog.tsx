@@ -71,7 +71,7 @@ export function EditSubjectDialog({
   useEffect(() => {
     if (subject && open) {
       reset({
-        classId: String(subject.preferableClass.id),
+        classId: String(subject.preferableClass?.id ?? ""),
         name: subject.name,
       });
     }

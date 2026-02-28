@@ -238,7 +238,7 @@ export function ClassesList() {
                     </TableCell>
                     <TableCell>
                       <span className="text-sm text-muted-foreground">
-                        {cls.preferableCategory.name}
+                        {cls.preferableCategory?.name}
                       </span>
                     </TableCell>
                     <TableCell>

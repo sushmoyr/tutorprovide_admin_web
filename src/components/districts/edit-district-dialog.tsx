@@ -69,11 +69,11 @@ export function EditDistrictDialog({
   useEffect(() => {
     if (district && open) {
       reset({
-        divisionId: String(district.division.id),
+        divisionId: String(divisions.find((d) => d.name === district.divisionName)?.id ?? ""),
         name: district.name,
       });
     }
-  }, [district, open, reset]);
+  }, [district, open, reset, divisions]);
 
   const onSubmit = async (data: EditDistrictFormData) => {
     if (!district) return;

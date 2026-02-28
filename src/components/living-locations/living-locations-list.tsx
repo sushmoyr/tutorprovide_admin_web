@@ -216,10 +216,10 @@ export function LivingLocationsList() {
                     {page * pageSize + index + 1}
                   </TableCell>
                   <TableCell>
-                    <span className="text-sm">{location.area.name}</span>
+                    <span className="text-sm">{location.areaName}</span>
                   </TableCell>
                   <TableCell>
-                    <span className="text-sm">{location.area.district.name}</span>
+                    <span className="text-sm">{location.districtName}</span>
                   </TableCell>
                   <TableCell>
                     <span className="text-sm font-medium">{location.name}</span>
