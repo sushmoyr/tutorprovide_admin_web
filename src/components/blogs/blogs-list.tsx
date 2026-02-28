@@ -283,7 +283,7 @@ export function BlogsList() {
               </TableHeader>
               <TableBody>
                 {blogs.map((blog) => (
-                  <TableRow key={blog.id} className="hover:bg-muted/50">
+                  <TableRow key={blog.slug} className="hover:bg-muted/50">
                     <TableCell>
                       {blog.coverImage ? (
                         <img

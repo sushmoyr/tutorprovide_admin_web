@@ -38,6 +38,7 @@ export function WelcomeGreetingDialog() {
   return (
     <Dialog open={open} onOpenChange={handleClose}>
       <DialogContent className="sm:max-w-2xl p-0 overflow-hidden">
+        <DialogTitle className="sr-only">{greeting.title}</DialogTitle>
         {greeting.imageUrl ? (
           <a
             href={greeting.link || undefined}
