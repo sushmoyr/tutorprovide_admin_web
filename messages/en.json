@@ -256,7 +256,7 @@
     "createdBy": "Created By",
     "rating": "Rating",
     "details": "Details",
-    "status": "Status",
+    "statusColumn": "Status",
     "createdAt": "Created At",
     "actions": "Actions",
     "addNew": "Add Feedback",
@@ -273,9 +273,11 @@
     "statusChangeSuccess": "Feedback status updated successfully",
     "filterByStatus": "Filter by status",
     "allStatuses": "All Statuses",
-    "status.PENDING": "Pending",
-    "status.LIVE": "Live",
-    "status.CANCELLED": "Cancelled",
+    "status": {
+      "PENDING": "Pending",
+      "LIVE": "Live",
+      "CANCELLED": "Cancelled"
+    },
     "showing": "Showing {from}-{to} of {total}",
     "previous": "Previous",
     "next": "Next",
@@ -466,6 +468,7 @@
     "pageOf": "Page {current} of {total}"
   },
   "permissions": {
+    "sl": "S/N",
     "title": "Permissions",
     "subtitle": "View all system permissions",
     "key": "Key",

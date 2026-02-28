@@ -225,7 +225,7 @@ export function FeedbacksList() {
                     {t("details")}
                   </TableHead>
                   <TableHead className="w-40">
-                    {t("status")}
+                    {t("statusColumn")}
                   </TableHead>
                   <TableHead className="hidden sm:table-cell">
                     <button

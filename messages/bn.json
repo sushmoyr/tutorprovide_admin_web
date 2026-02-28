@@ -256,7 +256,7 @@
     "createdBy": "তৈরিকারী",
     "rating": "রেটিং",
     "details": "বিবরণ",
-    "status": "স্থিতি",
+    "statusColumn": "স্থিতি",
     "createdAt": "তৈরির তারিখ",
     "actions": "কার্যক্রম",
     "addNew": "প্রতিক্রিয়া যোগ করুন",
@@ -273,9 +273,11 @@
     "statusChangeSuccess": "প্রতিক্রিয়ার স্থিতি সফলভাবে আপডেট হয়েছে",
     "filterByStatus": "স্থিতি অনুসারে ফিল্টার",
     "allStatuses": "সকল স্থিতি",
-    "status.PENDING": "অপেক্ষমাণ",
-    "status.LIVE": "সক্রিয়",
-    "status.CANCELLED": "বাতিল",
+    "status": {
+      "PENDING": "অপেক্ষমাণ",
+      "LIVE": "সক্রিয়",
+      "CANCELLED": "বাতিল"
+    },
     "showing": "{from}-{to} দেখাচ্ছে, মোট {total}",
     "previous": "পূর্ববর্তী",
     "next": "পরবর্তী",
@@ -466,6 +468,7 @@
     "pageOf": "পৃষ্ঠা {current} / {total}"
   },
   "permissions": {
+    "sl": "নং",
     "title": "অনুমতি",
     "subtitle": "সকল সিস্টেম অনুমতি দেখুন",
     "key": "কী",
