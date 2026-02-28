@@ -196,7 +196,7 @@ export function BlogsList() {
     );
   }
 
-  const blogs = data?.data ?? [];
+  const blogs = data?.data?.blogs ?? [];
   const pagination = data?.pagination;
 
   return (

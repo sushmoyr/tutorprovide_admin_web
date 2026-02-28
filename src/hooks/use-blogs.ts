@@ -3,7 +3,7 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { api } from "@/lib/api/client";
 import { endpoints } from "@/lib/api/endpoints";
-import type { ApiResponse, BlogListItem, Blog, BlogCategory, Tag, PaginationParams, BlogStatus } from "@/types";
+import type { ApiResponse, BlogListResponse, Blog, BlogCategory, Tag, PaginationParams, BlogStatus } from "@/types";
 
 interface BlogParams extends PaginationParams {
   search?: string;
@@ -15,7 +15,7 @@ export function useBlogs(params: BlogParams = {}) {
   return useQuery({
     queryKey: ["blogs", { page, size, sortBy, order, search, categoryId }],
     queryFn: () =>
-      api.get<ApiResponse<BlogListItem[]>>(endpoints.BLOGS, {
+      api.get<ApiResponse<BlogListResponse>>(endpoints.BLOGS, {
         page, size, sortBy, order,
         ...(search && { search }),
         ...(categoryId && { categoryId }),
