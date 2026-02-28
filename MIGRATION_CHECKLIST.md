@@ -83,25 +83,25 @@
 
 ## Address Configuration
 
-- [ ] Divisions (`/divisions`)
-- [ ] Districts (`/districts`)
-- [ ] Areas (`/areas`)
-- [ ] Living Locations (`/living/locations`)
+- [x] Divisions (`/divisions`)
+- [x] Districts (`/districts`)
+- [x] Areas (`/areas`)
+- [x] Living Locations (`/living/locations`)
 
 ## Tuition Configuration
 
-- [ ] Categories (`/categories`)
-- [ ] Curriculums (`/curriculums`)
-- [ ] Preferable Classes (`/classes`)
-- [ ] Subjects (`/subjects`)
-- [ ] Tuition Types List (`/tution/types`)
-- [ ] Create Tuition Type (`/tution/types/create`)
-- [ ] Edit Tuition Type (`/tution/types/edit/:id`)
+- [x] Categories (`/categories`)
+- [x] Curriculums (`/curriculums`)
+- [x] Preferable Classes (`/classes`)
+- [x] Subjects (`/subjects`)
+- [ ] Tuition Types List (`/tution/types`) — deprecated/commented out in Vue source, no API endpoints
+- [ ] Create Tuition Type (`/tution/types/create`) — deprecated
+- [ ] Edit Tuition Type (`/tution/types/edit/:id`) — deprecated
 
 ## Employee Configuration
 
-- [ ] Departments (`/departments`)
-- [ ] Designations (`/designations`)
+- [x] Departments (`/departments`)
+- [x] Designations (`/designations`)
 
 ## Invoices
 
@@ -123,8 +123,6 @@
 - [x] Roles List (`/roles`)
 - [x] Create Role (dialog in `/roles`)
 - [x] Edit Role (dialog in `/roles`)
-- [ ] Role Details (`/roles/details/:id`)
-- [ ] Role Management (`/roles/management`)
 
 ## Updates & Notifications
 
@@ -249,6 +247,6 @@
 
 | Status | Count    |
 |--------|----------|
-| Done | ~48      |
-| Remaining | ~86      |
+| Done | ~58      |
+| Remaining | ~76      |
 | **Total** | **~134** |
