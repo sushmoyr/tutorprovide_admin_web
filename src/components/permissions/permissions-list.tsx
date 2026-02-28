@@ -132,6 +132,9 @@ export function PermissionsList() {
             <Table>
               <TableHeader>
                 <TableRow className="bg-muted hover:bg-muted text-muted-foreground">
+                  <TableHead className="hidden md:table-cell">
+                    {t("sl")}
+                  </TableHead>
                   <TableHead>
                     <button
                       onClick={() => handleSort("key")}
@@ -165,10 +168,15 @@ export function PermissionsList() {
                 </TableRow>
               </TableHeader>
               <TableBody>
-                {permissions.map((permission) => (
+                {permissions.map((permission, index) => (
                   <TableRow key={permission.key} className="hover:bg-muted/50">
+                    <TableCell className="hidden md:table-cell">
+                      <span className="text-sm text-muted-foreground">
+                        {page * pageSize + index + 1}
+                      </span>
+                    </TableCell>
                     <TableCell>
-                      <code className="rounded bg-muted px-1.5 py-0.5 text-xs font-medium">
+                      <code className="rounded bg-muted px-1.5 py-0.5 font-medium">
                         {permission.key}
                       </code>
                     </TableCell>
