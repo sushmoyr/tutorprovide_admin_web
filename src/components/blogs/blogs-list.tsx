@@ -15,6 +15,7 @@ import {
   Search,
 } from "lucide-react";
 import { toast } from "sonner";
+import Link from "next/link";
 
 import {
   Table,
@@ -46,7 +47,6 @@ import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Skeleton } from "@/components/ui/skeleton";
 import { PageSizeSelector } from "@/components/shared/page-size-selector";
-import { EditBlogDialog } from "@/components/blogs/edit-blog-dialog";
 import {
   useBlogs,
   useDeleteBlog,
@@ -142,7 +142,6 @@ export function BlogsList() {
   const deleteMutation = useDeleteBlog();
   const changeStatusMutation = useChangeBlogStatus();
   const [blogToDelete, setBlogToDelete] = useState<BlogListItem | null>(null);
-  const [blogToEdit, setBlogToEdit] = useState<BlogListItem | null>(null);
 
   const categories = categoriesData?.data ?? [];
 
@@ -357,9 +356,11 @@ export function BlogsList() {
                           variant="ghost"
                           size="icon"
                           className="h-8 w-8"
-                          onClick={() => setBlogToEdit(blog)}
+                          asChild
                         >
-                          <Pencil className="h-4 w-4" />
+                          <Link href={`/blogs/${blog.slug}/edit`}>
+                            <Pencil className="h-4 w-4" />
+                          </Link>
                         </Button>
                         <Button
                           variant="ghost"
@@ -465,11 +466,6 @@ export function BlogsList() {
         </AlertDialogContent>
       </AlertDialog>
 
-      <EditBlogDialog
-        blog={blogToEdit}
-        open={!!blogToEdit}
-        onOpenChange={(open) => !open && setBlogToEdit(null)}
-      />
     </>
   );
 }

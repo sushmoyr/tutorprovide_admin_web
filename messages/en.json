@@ -524,6 +524,7 @@
     "statusPUBLISHED": "Published",
     "statusARCHIVED": "Archived",
     "addNew": "Add Blog",
+    "backToBlogs": "Back to Blogs",
     "createTitle": "Create Blog Post",
     "createDescription": "Write a new blog post",
     "editTitle": "Edit Blog Post",

@@ -1,15 +1,13 @@
 "use client";
 
-import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { Plus } from "lucide-react";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { BlogsList } from "@/components/blogs/blogs-list";
-import { CreateBlogDialog } from "@/components/blogs/create-blog-dialog";
 
 export default function BlogsPage() {
   const t = useTranslations("blogs");
-  const [createOpen, setCreateOpen] = useState(false);
 
   return (
     <div className="space-y-6">
@@ -18,13 +16,14 @@ export default function BlogsPage() {
           <h1 className="text-2xl font-bold tracking-tight">{t("title")}</h1>
           <p className="text-muted-foreground">{t("subtitle")}</p>
         </div>
-        <Button onClick={() => setCreateOpen(true)}>
-          <Plus className="mr-2 h-4 w-4" />
-          {t("addNew")}
+        <Button asChild>
+          <Link href="/blogs/create">
+            <Plus className="mr-2 h-4 w-4" />
+            {t("addNew")}
+          </Link>
         </Button>
       </div>
       <BlogsList />
-      <CreateBlogDialog open={createOpen} onOpenChange={setCreateOpen} />
     </div>
   );
 }
