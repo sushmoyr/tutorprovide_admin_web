@@ -61,18 +61,32 @@ export function Sidebar() {
             : "w-[var(--sidebar-width)]"
         )}
       >
-        {/* Logo */}
-        <div className="flex h-14 shrink-0 items-center px-3">
-          <Link href="/">
-            <Image
-              src="/images/logo.png"
-              alt="TutorProvide"
-              width={collapsed ? 40 : 160}
-              height={40}
-              unoptimized
-              className="object-contain"
-            />
-          </Link>
+        {/* Logo & Collapse Toggle */}
+        <div className="flex h-14 shrink-0 items-center justify-between px-3">
+          {!collapsed && (
+            <Link href="/">
+              <Image
+                src="/images/logo.png"
+                alt="TutorProvide"
+                width={160}
+                height={40}
+                unoptimized
+                className="object-contain"
+              />
+            </Link>
+          )}
+          <Button
+            variant="ghost"
+            size="icon"
+            className="h-8 w-8 shrink-0"
+            onClick={toggle}
+          >
+            {collapsed ? (
+              <PanelLeft className="h-4 w-4" />
+            ) : (
+              <PanelLeftClose className="h-4 w-4" />
+            )}
+          </Button>
         </div>
 
         {/* Navigation — scrollable */}
@@ -220,24 +234,6 @@ export function Sidebar() {
           </div>
         </nav>
 
-        {/* Collapse Toggle */}
-        <div className="shrink-0 border-t p-2">
-          <Button
-            variant="ghost"
-            size="sm"
-            className="w-full justify-center"
-            onClick={toggle}
-          >
-            {collapsed ? (
-              <PanelLeft className="h-4 w-4" />
-            ) : (
-              <>
-                <PanelLeftClose className="mr-2 h-4 w-4" />
-                <span>{t("sidebar.collapse")}</span>
-              </>
-            )}
-          </Button>
-        </div>
       </aside>
     </TooltipProvider>
   );

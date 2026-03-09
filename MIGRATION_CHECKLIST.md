@@ -81,28 +81,6 @@
 - [ ] Tutoring History List (`/tutor/tutoring/histories/:id`)
 - [ ] Tutoring History Details (`/tutoring/history/:id/:status`)
 
-## Address Configuration
-
-- [x] Divisions (`/divisions`)
-- [x] Districts (`/districts`)
-- [x] Areas (`/areas`)
-- [x] Living Locations (`/living/locations`)
-
-## Tuition Configuration
-
-- [x] Categories (`/categories`)
-- [x] Curriculums (`/curriculums`)
-- [x] Preferable Classes (`/classes`)
-- [x] Subjects (`/subjects`)
-- [ ] Tuition Types List (`/tution/types`) — deprecated/commented out in Vue source, no API endpoints
-- [ ] Create Tuition Type (`/tution/types/create`) — deprecated
-- [ ] Edit Tuition Type (`/tution/types/edit/:id`) — deprecated
-
-## Employee Configuration
-
-- [x] Departments (`/departments`)
-- [x] Designations (`/designations`)
-
 ## Invoices
 
 - [ ] Invoices List (`/invoices/management`)
@@ -116,6 +94,25 @@
 - [ ] Payments List (`/payments`)
 - [ ] Edit Payment (`/payments/edit/:id`)
 - [ ] Payment Details (`/payments/show/:id`)
+
+## Address Configuration
+
+- [x] Divisions (`/divisions`)
+- [x] Districts (`/districts`)
+- [x] Areas (`/areas`)
+- [x] Living Locations (`/living/locations`)
+
+## Tuition Configuration
+
+- [x] Categories (`/categories`)
+- [x] Curriculums (`/curriculums`)
+- [x] Preferable Classes (`/classes`)
+- [x] Subjects (`/subjects`)
+
+## Employee Configuration
+
+- [x] Departments (`/departments`)
+- [x] Designations (`/designations`)
 
 ## Roles & Permissions
 

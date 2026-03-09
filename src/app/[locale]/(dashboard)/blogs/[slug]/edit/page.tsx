@@ -2,7 +2,7 @@
 
 import { use } from "react";
 import { useTranslations } from "next-intl";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Eye } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -23,17 +23,25 @@ export default function EditBlogPage({
 
   return (
     <div className="space-y-6">
-      <div>
-        <Button variant="ghost" size="sm" className="mb-2" asChild>
-          <Link href="/blogs">
-            <ArrowLeft className="mr-1.5 h-4 w-4" />
-            {t("backToBlogs")}
+      <div className="flex items-start justify-between">
+        <div>
+          <Button variant="ghost" size="sm" className="mb-2" asChild>
+            <Link href="/blogs">
+              <ArrowLeft className="mr-1.5 h-4 w-4" />
+              {t("backToBlogs")}
+            </Link>
+          </Button>
+          <h1 className="text-2xl font-bold tracking-tight">
+            {t("editTitle")}
+          </h1>
+          <p className="text-muted-foreground">{t("editDescription")}</p>
+        </div>
+        <Button variant="outline" size="sm" asChild>
+          <Link href={`/blogs/${slug}/preview`}>
+            <Eye className="mr-1.5 h-3.5 w-3.5" />
+            {t("preview")}
           </Link>
         </Button>
-        <h1 className="text-2xl font-bold tracking-tight">
-          {t("editTitle")}
-        </h1>
-        <p className="text-muted-foreground">{t("editDescription")}</p>
       </div>
       <div className="mx-auto max-w-3xl">
         {isLoading ? (

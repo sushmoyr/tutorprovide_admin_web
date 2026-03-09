@@ -549,7 +549,11 @@
     "showing": "{from}-{to} দেখাচ্ছে, মোট {total}",
     "previous": "পূর্ববর্তী",
     "next": "পরবর্তী",
-    "pageOf": "পৃষ্ঠা {current} / {total}"
+    "pageOf": "পৃষ্ঠা {current} / {total}",
+    "preview": "প্রিভিউ",
+    "previewTitle": "ব্লগ প্রিভিউ",
+    "previewDescription": "প্রকাশের পর ব্লগ পোস্টটি কেমন দেখাবে তা দেখুন",
+    "lastUpdated": "সর্বশেষ আপডেট: {date}"
   },
   "blogCategories": {
     "title": "ব্লগ ক্যাটাগরি",
