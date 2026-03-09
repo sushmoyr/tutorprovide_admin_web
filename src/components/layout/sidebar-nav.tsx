@@ -55,7 +55,6 @@ export const sidebarGroups: NavGroup[] = [
     label: "sidebar.tuitionProfile",
     icon: BookOpen,
     items: [
-      { title: "sidebar.tuitions", href: "/tuitions", icon: BookOpen },
       { title: "sidebar.posts", href: "/posts", icon: FileText },
       { title: "sidebar.employees", href: "/employees", icon: Building2 },
       { title: "sidebar.guardians", href: "/guardians", icon: UserCheck },
