@@ -207,7 +207,7 @@ export function GuardiansList({ gender: genderProp }: GuardiansListProps) {
               <SelectItem value="ALL">{t("allGenders")}</SelectItem>
               {GENDER_OPTIONS.map((g) => (
                 <SelectItem key={g} value={g}>
-                  {t(`gender.${g}`)}
+                  {t(`gender_${g}`)}
                 </SelectItem>
               ))}
             </SelectContent>
@@ -287,7 +287,7 @@ export function GuardiansList({ gender: genderProp }: GuardiansListProps) {
                     </TableCell>
                     <TableCell className="hidden lg:table-cell">
                       <Badge variant="outline" className={getGenderColor(guardian.gender)}>
-                        {t(`gender.${guardian.gender}`)}
+                        {t(`gender_${guardian.gender}`)}
                       </Badge>
                     </TableCell>
                     <TableCell className="hidden xl:table-cell">
@@ -295,11 +295,11 @@ export function GuardiansList({ gender: genderProp }: GuardiansListProps) {
                         <div className="h-2 w-16 rounded-full bg-muted">
                           <div
                             className="h-2 rounded-full bg-brand-primary"
-                            style={{ width: `${Math.min(guardian.completion, 100)}%` }}
+                            style={{ width: `${Math.min(Math.round(guardian.completion * 100), 100)}%` }}
                           />
                         </div>
                         <span className="text-xs text-muted-foreground">
-                          {guardian.completion}%
+                          {Math.round(guardian.completion * 100)}%
                         </span>
                       </div>
                     </TableCell>

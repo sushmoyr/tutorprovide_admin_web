@@ -216,7 +216,7 @@ export function TutorsList({ gender: genderProp }: TutorsListProps) {
               <SelectItem value="ALL">{t("allGenders")}</SelectItem>
               {GENDER_OPTIONS.map((g) => (
                 <SelectItem key={g} value={g}>
-                  {t(`gender.${g}`)}
+                  {t(`gender_${g}`)}
                 </SelectItem>
               ))}
             </SelectContent>
@@ -236,7 +236,7 @@ export function TutorsList({ gender: genderProp }: TutorsListProps) {
             <SelectItem value="ALL">{t("allStatuses")}</SelectItem>
             {STATUS_OPTIONS.map((status) => (
               <SelectItem key={status} value={status}>
-                {t(`status.${status}`)}
+                {t(`status_${status}`)}
               </SelectItem>
             ))}
           </SelectContent>
@@ -310,12 +310,12 @@ export function TutorsList({ gender: genderProp }: TutorsListProps) {
                     </TableCell>
                     <TableCell className="hidden lg:table-cell">
                       <Badge variant="outline" className={getGenderColor(tutor.gender)}>
-                        {t(`gender.${tutor.gender}`)}
+                        {t(`gender_${tutor.gender}`)}
                       </Badge>
                     </TableCell>
                     <TableCell>
                       <Badge variant="outline" className={getStatusColor(tutor.status)}>
-                        {t(`status.${tutor.status}`)}
+                        {t(`status_${tutor.status}`)}
                       </Badge>
                     </TableCell>
                     <TableCell className="hidden lg:table-cell">
@@ -323,11 +323,11 @@ export function TutorsList({ gender: genderProp }: TutorsListProps) {
                         <div className="h-2 w-16 rounded-full bg-muted">
                           <div
                             className="h-2 rounded-full bg-brand-primary"
-                            style={{ width: `${Math.min(tutor.completion, 100)}%` }}
+                            style={{ width: `${Math.min(Math.round(tutor.completion * 100), 100)}%` }}
                           />
                         </div>
                         <span className="text-xs text-muted-foreground">
-                          {tutor.completion}%
+                          {Math.round(tutor.completion * 100)}%
                         </span>
                       </div>
                     </TableCell>
