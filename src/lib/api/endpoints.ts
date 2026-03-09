@@ -22,7 +22,13 @@ export const endpoints = {
 
   // Tuitions
   TUITIONS: "/tuitions",
+  TUITIONS_SUMMARY: "/tuitions/summary",
   tuitionById: (id: string | number) => `/tuitions/${id}`,
+  TUITION_APPLICATIONS: "/tuitions/applications",
+  TUITION_APPLICATION_STATS: "/tuitions/applications/stats",
+  tuitionApplicationById: (id: string | number) => `/tuitions/applications/${id}`,
+  appliedTutors: (tuitionId: string | number) => `/tuitions/applications/applied-tutors/${tuitionId}`,
+  suggestedTutors: (tuitionId: string | number) => `/tuitions/${tuitionId}/suggested-tutors`,
   APPOINTMENTS: "/tuitions/appointments",
   appointmentById: (id: string | number) => `/tuitions/appointments/${id}`,
   DEMO_CLASSES: "/tuitions/demo-class",
@@ -34,8 +40,10 @@ export const endpoints = {
 
   // Invoices & Payments
   INVOICES: "/invoices",
+  ADMIN_INVOICES: "/admin/invoices",
   invoiceById: (id: string | number) => `/invoices/${id}`,
   PAYMENTS: "/payments",
+  ADMIN_PAYMENTS: "/admin/payments",
   paymentById: (id: string | number) => `/payments/${id}`,
 
   // Location Configuration

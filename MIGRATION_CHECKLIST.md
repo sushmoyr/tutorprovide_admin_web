@@ -15,16 +15,16 @@
 
 ## Tuition Management
 
-- [ ] Pending Tuitions (`/pending/tuition`)
-- [ ] Live Tuitions (`/live/tuition`)
-- [ ] Cancelled Tuitions (`/cancel/tuition`)
-- [ ] Shortlisted Tuitions (`/shortlist/tuition`)
-- [ ] Appointed Tuitions (`/appoint/tuition`)
-- [ ] Confirmed Tuitions (`/confirm/tuition`)
+- [x] Pending Tuitions (`/pending/tuition`)
+- [x] Live Tuitions (`/live/tuition`)
+- [x] Cancelled Tuitions (`/cancel/tuition`)
+- [x] Shortlisted Tuitions (`/shortlist/tuition`)
+- [x] Appointed Tuitions (`/appoint/tuition`)
+- [x] Confirmed Tuitions (`/confirm/tuition`)
 
 ## Tuition Posts
 
-- [ ] Posts List (`/posts`)
+- [x] Posts List (`/posts`)
 - [ ] Create Post (`/posts/create`)
 - [ ] Edit Post (`/posts/edit/:id`)
 - [ ] Post Details (`/posts/details/:id`)
@@ -34,43 +34,43 @@
 
 ## Users — Guardians
 
-- [ ] Guardians List (`/guardians`)
+- [x] Guardians List (`/guardians`)
 - [ ] Create Guardian (`/guardians/create`)
 - [ ] Guardian Details (`/guardian/details/:id`)
 - [ ] Edit Guardian Details (`/guardian/details/edit/:id`)
-- [ ] Male Guardians (`/male/guardians`)
-- [ ] Female Guardians (`/female/guardians`)
+- [x] Male Guardians (`/male/guardians`)
+- [x] Female Guardians (`/female/guardians`)
 - [ ] Guardian Profile (`/guardian/profile`)
 - [ ] Guardian Profile Update (`/guardian/profile/update`)
 
 ## Users — Tutors
 
-- [ ] Tutors List (`/tutors`)
+- [x] Tutors List (`/tutors`)
 - [ ] Create Tutor (`/tutors/create`)
 - [ ] Tutor Details (`/user/tutor/details/:id`)
 - [ ] Edit Tutor Details (`/user/tutor/details/edit/:id`)
 - [ ] Download Tutor CV (`/user/tutor/cv/:id`)
-- [ ] Male Tutors (`/male/tutors`)
-- [ ] Female Tutors (`/female/tutors`)
+- [x] Male Tutors (`/male/tutors`)
+- [x] Female Tutors (`/female/tutors`)
 - [ ] Tutor Profile (`/tutor/profile`)
 - [ ] Tutor Profile CV (`/tutor/profile/cv`)
 - [ ] Tutor Profile Update (`/tutor/profile/update`)
 
 ## Users — Employees
 
-- [ ] Employees List (`/employees`)
+- [x] Employees List (`/employees`)
 - [ ] Create Employee (`/employees/create`)
 - [ ] Employee Details (`/employee/details/:id`)
 - [ ] Edit Employee (`/employee/update/:id`)
 
 ## Users — General
 
-- [ ] Users List (`/users`)
-- [ ] Create User (`/users/create`)
+- [x] Users List (`/users`)
+- [x] Create User (dialog in `/users`)
 - [ ] Edit User (`/users/edit/:id`)
-- [ ] Premium Requests List (`/users/premium/request`)
+- [x] Premium Requests List (`/users/premium/request`)
 - [ ] Premium Request Details (`/users/premium/request/details/:id`)
-- [ ] Verification Requests List (`/users/verification/request`)
+- [x] Verification Requests List (`/users/verification/request`)
 - [ ] Verification Request Details (`/users/verification/request/details/:id`)
 
 ## User History & Invoices
@@ -83,7 +83,7 @@
 
 ## Invoices
 
-- [ ] Invoices List (`/invoices/management`)
+- [x] Invoices List (`/invoices/management`)
 - [ ] Edit Invoice (`/invoices/edit/:id`)
 - [ ] Invoice Details (`/invoices/show/:id`)
 - [ ] Tuition Invoices (`/tuition/invoices`)
@@ -91,7 +91,7 @@
 
 ## Payments
 
-- [ ] Payments List (`/payments`)
+- [x] Payments List (`/payments`)
 - [ ] Edit Payment (`/payments/edit/:id`)
 - [ ] Payment Details (`/payments/show/:id`)
 
@@ -123,7 +123,7 @@
 
 ## Updates & Notifications
 
-- [ ] Updates List (`/updates`)
+- [x] Updates List (`/updates`)
 - [ ] Employee Updates (`/employee/updates`)
 - [ ] Update Appointments Details (`/updates/details/appoints/show/:id`)
 - [ ] Update Confirmations Details (`/updates/details/confirm/show/:id`)
@@ -174,7 +174,7 @@
 - [x] Blogs List (`/blogs`)
 - [x] Create Blog (dialog in `/blogs`)
 - [x] Edit Blog (dialog in `/blogs`)
-- [ ] Blog Details (`/blog/details/:slug`)
+- [x] Blog Preview (`/blogs/:slug/preview`)
 - [ ] Blogs by Tag (`/tag/blogs/:tag`)
 - [x] Blog Categories (`/blog-categories`)
 
@@ -244,6 +244,6 @@
 
 | Status | Count    |
 |--------|----------|
-| Done | ~58      |
-| Remaining | ~76      |
-| **Total** | **~134** |
+| Done | 82      |
+| Remaining | 45      |
+| **Total** | **127** |
