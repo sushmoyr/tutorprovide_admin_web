@@ -108,7 +108,6 @@ export const sidebarGroups: NavGroup[] = [
     label: "sidebar.userRole",
     icon: Shield,
     items: [
-      { title: "sidebar.users", href: "/users", icon: Users },
       { title: "sidebar.roles", href: "/roles", icon: Shield },
       { title: "sidebar.permissions", href: "/permissions", icon: Shield },
     ],
